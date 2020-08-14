@@ -1,0 +1,241 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--ff-primary: 'Rowdies', cursive;
+	--ff-tetiary: 'Source Code Pro', monospace;
+	--ff-secondary: 'Sora', sans-serif;
+
+	--fw-reg: 200;
+	--fw-bold: 900;
+
+	--fs-h1: 3rem;
+	--fs-h2: 2.25rem;
+	--fs-h3: 1.75rem;
+	--fs-body: 1rem;
+
+	--clr-light: #fff;
+	--clr-dark: #0c0303;
+	--clr-accent: #f59607;
+}
+
+@media (min-width: 800px) {
+	:root {
+		--fs-h1: 4rem;
+		--fs-h2: 3.75rem;
+		--fs-h3: 1.5rem;
+		--fs-body: 1.125rem;
+	}
+}
+
+/****** INDEX ******/
+
+body {
+	font-family: var(--ff-secondary);
+	background: linear-gradient(rgba(249,246,246,0.65), rgba(199,119,18,0.45), rgba(0,0,0,0.38),rgba(0,0,0,0)),
+	url(../image/salad.jpg) no-repeat;
+	background-size: cover;
+	align-items: center;
+}
+
+header {
+	margin: 20px auto;
+	padding: 0;
+	width: 90%;
+}
+
+.head-container{
+	width: 100%;
+	text-align: center;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+.logo {
+}
+
+.nav-item {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 30px;
+}
+
+.nav-item .nav-link{
+	list-style: none;
+	padding: 0 20px;
+}
+
+.nav-item .nav-link a{
+	text-decoration: none;
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	color: var(--clr-dark);
+}
+
+.nav-link a{
+	transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.nav-link a::hover {
+	transform: scale(1.2);
+	opacity: .75;
+}
+
+.current {
+	padding: 3px 6px;
+	border: 3px solid var(--clr-dark);
+	color: var(--clr-accent);
+}
+
+
+main {
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+	align-items: center;
+}
+
+h3 {
+	width: 250px;
+}
+
+.Explore-text {
+	background: linear-gradient(to left, #fff, #f59607);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	font-size: var(--fs-h1);
+	font-weight: var(--fw-bold);
+	font-family: var(--ff-primary);
+}
+
+
+.side-text {
+	color: var(--clr-light);
+	text-align: center;
+	margin: 40px 0 0 80px;
+	padding: 15vh 50px;
+	width: 470px;
+	height: 800px;
+	background: var(--clr-dark);
+	opacity: 0.7;
+	animation: drop 1.5s ease;
+}
+
+.side-text p {
+	padding: 40px 0 20px 0;
+	font-size: var(--fs-body);
+	font-weight: var(--fw-reg);
+	font-family: var(--ff-primary);
+	text-align: justify;
+}
+
+.side-text h3 {
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: var(--fw-reg);
+	font-size: var(--fs-h3);
+	font-family: var(--ff-primary);
+	margin: 40px auto;
+
+}
+
+.btn {
+	background: var(--clr-accent);
+	color: var(--clr-dark);
+	border: none;
+	width: 150px;
+	height: 50px;
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+}
+
+.btn a {
+	text-decoration: none;
+	color: var(--clr-dark);
+}
+
+@keyframes drop{
+	0%{
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+
+	100%{
+		opacity: 0.7;
+		transform: translateY(0px);
+	}
+}
+
+/***** DISHES ******/
+
+.food-body{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/*background: #fff;*/
+	width: 100%;
+	text-align: center;
+}
+
+.food h3 {
+	text-align: center;
+	margin: auto;
+}
+
+.food img{
+	width: 400px;
+	min-height: 250px;
+	object-fit: cover;
+	margin: 2em 0;
+	filter: drop-shadow(0px 10px 6px);
+}
+/******* ABOUT ******/
+
+.body {
+	font-family: var(--ff-secondary);
+	background: linear-gradient(rgba(249,246,246,1), rgba(249,246,246,0.5)),
+	url(../image/salad.jpg) no-repeat;
+	background-size: cover;
+	align-items: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/*background: #fff;*/
+	width: 100%;
+	text-align: center;
+	font-family: var(--ff-tetiary);
+}
+
+.about-container img {
+	width: 350px;
+	min-height: 150px;
+	object-fit: cover;
+	margin: 2em 0;
+	filter: drop-shadow(0px 10px 6px);
+}
+
+.about-container h3, p {
+	text-align: center;
+	margin: auto;
+}
+
+/****** FOOTER *****/
+
+footer {
+	background: var(--clr-accent);
+	width: 100%;
+	padding: 30px 0;
+	margin-top: 40px;
+	color: var(--clr-dark);
+	text-align: center;
+	font-family: var(--ff-tetiary);
+	font-weight: var(--fw-reg);
+}
